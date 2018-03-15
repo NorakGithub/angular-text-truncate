@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  textMessage = 'hjjkshnklasnkalsncs ckajsnjkasnca csjnjksdnc ansaklsndkas dahnsdklasndas askdnlksndas ;skd;alskda;smdsamd sdmalsmd';
+  textLength = 50;
+  endingText = '<span>...</span>';
 }

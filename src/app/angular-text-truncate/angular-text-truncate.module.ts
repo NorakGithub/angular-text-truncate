@@ -6,6 +6,7 @@ import { AngularTextTruncateComponent } from './angular-text-truncate.component'
   imports: [
     CommonModule
   ],
-  declarations: [AngularTextTruncateComponent]
+  declarations: [AngularTextTruncateComponent],
+  exports: [AngularTextTruncateComponent]
 })
 export class AngularTextTruncateModule { }

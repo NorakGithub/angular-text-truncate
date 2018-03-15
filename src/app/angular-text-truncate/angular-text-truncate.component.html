@@ -1,3 +1,5 @@
 <p>
-  angular-text-truncate works!
+  <span [innerHtml]="truncatedTextMessage"></span>
+  <a *ngIf="!isDisplayFullText && isButtonDisplayed"  href="javascript:void(0)" (click)="toggleMoreOrLess()">more</a>
+  <a *ngIf="isDisplayFullText && isButtonDisplayed"  href="javascript:void(0)" (click)="toggleMoreOrLess()">less</a>
 </p>

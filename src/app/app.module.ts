@@ -3,14 +3,15 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-
+import { AngularTextTruncateModule } from './angular-text-truncate/angular-text-truncate.module';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AngularTextTruncateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
