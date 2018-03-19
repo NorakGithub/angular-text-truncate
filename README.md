@@ -2,26 +2,48 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.3.
 
-## Development server
+## Install: 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```
+npm install angular-text-truncate --save
 
-## Code scaffolding
+import AngularTextTruncateModule from 'angular-text-truncate';
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
 
-## Build
+## Usage:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+```
+By default just specify the text message that you want to truncate
 
-## Running unit tests
+  <angular-text-truncate
+      [textMessage]="textMessage">
+  </angular-text-truncate>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
 
-## Running end-to-end tests
+## Attributes
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```
+  all avilable attributes are:
+  
+  -> [textMessage]="textMessage" // text message that needs to be truncated
+  -> [textDisplayLength]="200" // how many characters you want to display in trucated text, default will be 100,
+  -> [endingIcon]="endingTextIcon" // concat any icon at the end of truncated text, default will be '...' .
+  -> [displayLabels]="['show more', 'show less']" // send array of labels that needs to be displayed, default will be 'more' , 'less';
 
-## Further help
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```
+  Example:
+  
+    <angular-text-truncate
+      [textMessage]="textMessage"
+      [textDisplayLength]="200"
+      [endingIcon]="endingText"
+      [displayLabels]="['show more', 'show less']">
+    </angular-text-truncate>
+
+```
+
+### you can access the demo link here  https://rakeshuvsn.github.io/angular-text-truncate/

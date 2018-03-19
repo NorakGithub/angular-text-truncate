@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-angular-text-truncate',
+  selector: 'angular-text-truncate',
   templateUrl: './angular-text-truncate.component.html',
   styleUrls: ['./angular-text-truncate.component.scss']
 })
@@ -9,12 +9,16 @@ export class AngularTextTruncateComponent implements OnInit {
   @Input() textMessage: string;
   @Input() endingIcon: string;
   @Input() textDisplayLength: number;
+  @Input() displayLabels: Array<string>;
   truncatedTextMessage: string;
-  isDisplayFullText: boolean = false;
+  isDisplayFullText: boolean;
   isButtonDisplayed: boolean;
   constructor() { }
 
   ngOnInit() {
+    if(!this.displayLabels) {
+      this.displayLabels = [];
+    }
     this.truncatedTextMessage = this.text_truncate(this.textMessage, this.textDisplayLength, this.endingIcon);
   }
 
